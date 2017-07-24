@@ -1,23 +1,23 @@
-США, ИГИЛ, neg, current
-Сирия, США, neg, current
-Россия, США, neg, current
-Россия, ИГИЛ, neg, current
-Китай, США, neg, current
-НАТО, Россия, neg, current
-Россия, Финляндия, pos, current
-Штайнмайер, Трамп, neg, current
-США, Северная Корея, neg, current
-Россия, НАТО, neg, current
-Иран, США, neg, current
-Иран, Сирия, pos, current
-Сирия, Иран, pos, current
-Али Хаменеи, США, neg, current
-Али Хаменеи, Россия, pos, current
-Россия, Сирия, pos, current
-Обама, Сирия, neg, current
-Алирез Резахах, США, neg, current
-Алирез Резахах, Россия, pos, current
-Алирез Резахах, Сирия, pos, current
-Алирез Резахах, ИГИЛ, neg, current
+РЎРЁРђ, РР“РР›, neg, current
+РЎРёСЂРёСЏ, РЎРЁРђ, neg, current
+Р РѕСЃСЃРёСЏ, РЎРЁРђ, neg, current
+Р РѕСЃСЃРёСЏ, РР“РР›, neg, current
+РљРёС‚Р°Р№, РЎРЁРђ, neg, current
+РќРђРўРћ, Р РѕСЃСЃРёСЏ, neg, current
+Р РѕСЃСЃРёСЏ, Р¤РёРЅР»СЏРЅРґРёСЏ, pos, current
+РЁС‚Р°Р№РЅРјР°Р№РµСЂ, РўСЂР°РјРї, neg, current
+РЎРЁРђ, РЎРµРІРµСЂРЅР°СЏ РљРѕСЂРµСЏ, neg, current
+Р РѕСЃСЃРёСЏ, РќРђРўРћ, neg, current
+РСЂР°РЅ, РЎРЁРђ, neg, current
+РСЂР°РЅ, РЎРёСЂРёСЏ, pos, current
+РЎРёСЂРёСЏ, РСЂР°РЅ, pos, current
+РђР»Рё РҐР°РјРµРЅРµРё, РЎРЁРђ, neg, current
+РђР»Рё РҐР°РјРµРЅРµРё, Р РѕСЃСЃРёСЏ, pos, current
+Р РѕСЃСЃРёСЏ, РЎРёСЂРёСЏ, pos, current
+РћР±Р°РјР°, РЎРёСЂРёСЏ, neg, current
+РђР»РёСЂРµР· Р РµР·Р°С…Р°С…, РЎРЁРђ, neg, current
+РђР»РёСЂРµР· Р РµР·Р°С…Р°С…, Р РѕСЃСЃРёСЏ, pos, current
+РђР»РёСЂРµР· Р РµР·Р°С…Р°С…, РЎРёСЂРёСЏ, pos, current
+РђР»РёСЂРµР· Р РµР·Р°С…Р°С…, РР“РР›, neg, current
 
-
+ 

@@ -1,40 +1,40 @@
-Хезболла, Асад, pos, current
-Хезболла, Тель-Авив, neg, current
-Али Лариджани (Ali Larijani), Россия, pos, current
-Али Хаменеи (Ayatollah Ali Khamenei), Лариджани, neg, current
-Али Хаменеи (Ayatollah Ali Khamenei), Лариджани, neg, current
-Али Хаменеи, Саид Джалили (Saeid Jalili), neg, current
-Асад, Хезболла, pos, current
-Нетаньяху, Хезболла, neg, current
-Египет, Израиль, pos, current
-Израиль, Хезболла, neg, current
-Израиль, Cаудовская Аравия, pos, current
-Израиль, Асад, neg, current
-Израиль, Египет, pos, current
-Израиль, Иордания, pos, current
-Израиль, Иран, neg, current
-Израиль, Москва, pos, current
-Израиль, Россия, pos, current
-Израиль, Саудовская Аравия, pos, current
-Иордания, Израиль, pos, current
-Иордания, Израиль, pos, current
-Иран, Асад, pos, current
-Иран, Израиль, neg, current
-Иран, Россия, pos, current
-Лариджани, Абдул Кадыр Хан (AQ Khan), neg, current
-Лариджани, Москва, pos, current
-Москва, Асад, pos, current
-Москва, Израиль, pos, current
-Москва, Тегеран, pos, current
-Моссат, Рухолла Мусави Хомейни (Ruhollah Khomeini), neg, past
-ООН, Иран, neg, past
-Россия, Асад, pos, current
-Россия, Израиль, pos, current
-Россия, Иран, pos, current
-Россия, ООН, pos, current
-Саудовская Аравия, Израиль, pos, current
-Саудовская Аравия, Иран, neg, current
-Тегеран, Асад, pos, current
-Тель-Авив, Хезболла, neg, current
-Хезболла, Асад, pos, current
-Хезболла, Тель-Авив, neg, current
+РҐРµР·Р±РѕР»Р»Р°, РђСЃР°Рґ, pos, current
+РҐРµР·Р±РѕР»Р»Р°, РўРµР»СЊ-РђРІРёРІ, neg, current
+РђР»Рё Р›Р°СЂРёРґР¶Р°РЅРё (Ali Larijani), Р РѕСЃСЃРёСЏ, pos, current
+РђР»Рё РҐР°РјРµРЅРµРё (Ayatollah Ali Khamenei), Р›Р°СЂРёРґР¶Р°РЅРё, neg, current
+РђР»Рё РҐР°РјРµРЅРµРё (Ayatollah Ali Khamenei), Р›Р°СЂРёРґР¶Р°РЅРё, neg, current
+РђР»Рё РҐР°РјРµРЅРµРё, РЎР°РёРґ Р”Р¶Р°Р»РёР»Рё (Saeid Jalili), neg, current
+РђСЃР°Рґ, РҐРµР·Р±РѕР»Р»Р°, pos, current
+РќРµС‚Р°РЅСЊСЏС…Сѓ, РҐРµР·Р±РѕР»Р»Р°, neg, current
+Р•РіРёРїРµС‚, РР·СЂР°РёР»СЊ, pos, current
+РР·СЂР°РёР»СЊ, РҐРµР·Р±РѕР»Р»Р°, neg, current
+РР·СЂР°РёР»СЊ, CР°СѓРґРѕРІСЃРєР°СЏ РђСЂР°РІРёСЏ, pos, current
+РР·СЂР°РёР»СЊ, РђСЃР°Рґ, neg, current
+РР·СЂР°РёР»СЊ, Р•РіРёРїРµС‚, pos, current
+РР·СЂР°РёР»СЊ, РРѕСЂРґР°РЅРёСЏ, pos, current
+РР·СЂР°РёР»СЊ, РСЂР°РЅ, neg, current
+РР·СЂР°РёР»СЊ, РњРѕСЃРєРІР°, pos, current
+РР·СЂР°РёР»СЊ, Р РѕСЃСЃРёСЏ, pos, current
+РР·СЂР°РёР»СЊ, РЎР°СѓРґРѕРІСЃРєР°СЏ РђСЂР°РІРёСЏ, pos, current
+РРѕСЂРґР°РЅРёСЏ, РР·СЂР°РёР»СЊ, pos, current
+РРѕСЂРґР°РЅРёСЏ, РР·СЂР°РёР»СЊ, pos, current
+РСЂР°РЅ, РђСЃР°Рґ, pos, current
+РСЂР°РЅ, РР·СЂР°РёР»СЊ, neg, current
+РСЂР°РЅ, Р РѕСЃСЃРёСЏ, pos, current
+Р›Р°СЂРёРґР¶Р°РЅРё, РђР±РґСѓР» РљР°РґС‹СЂ РҐР°РЅ (AQ Khan), neg, current
+Р›Р°СЂРёРґР¶Р°РЅРё, РњРѕСЃРєРІР°, pos, current
+РњРѕСЃРєРІР°, РђСЃР°Рґ, pos, current
+РњРѕСЃРєРІР°, РР·СЂР°РёР»СЊ, pos, current
+РњРѕСЃРєРІР°, РўРµРіРµСЂР°РЅ, pos, current
+РњРѕСЃСЃР°С‚, Р СѓС…РѕР»Р»Р° РњСѓСЃР°РІРё РҐРѕРјРµР№РЅРё (Ruhollah Khomeini), neg, past
+РћРћРќ, РСЂР°РЅ, neg, past
+Р РѕСЃСЃРёСЏ, РђСЃР°Рґ, pos, current
+Р РѕСЃСЃРёСЏ, РР·СЂР°РёР»СЊ, pos, current
+Р РѕСЃСЃРёСЏ, РСЂР°РЅ, pos, current
+Р РѕСЃСЃРёСЏ, РћРћРќ, pos, current
+РЎР°СѓРґРѕРІСЃРєР°СЏ РђСЂР°РІРёСЏ, РР·СЂР°РёР»СЊ, pos, current
+РЎР°СѓРґРѕРІСЃРєР°СЏ РђСЂР°РІРёСЏ, РСЂР°РЅ, neg, current
+РўРµРіРµСЂР°РЅ, РђСЃР°Рґ, pos, current
+РўРµР»СЊ-РђРІРёРІ, РҐРµР·Р±РѕР»Р»Р°, neg, current
+РҐРµР·Р±РѕР»Р»Р°, РђСЃР°Рґ, pos, current
+РҐРµР·Р±РѕР»Р»Р°, РўРµР»СЊ-РђРІРёРІ, neg, current

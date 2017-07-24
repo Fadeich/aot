@@ -1,4 +1,4 @@
-Путин, Асад, pos, current
-Бернер, Путин, neg, current
-Европа, Россия, neg, current
-Россия, Европа, neg, current
+РџСѓС‚РёРЅ, РђСЃР°Рґ, pos, current
+Р‘РµСЂРЅРµСЂ, РџСѓС‚РёРЅ, neg, current
+Р•РІСЂРѕРїР°, Р РѕСЃСЃРёСЏ, neg, current
+Р РѕСЃСЃРёСЏ, Р•РІСЂРѕРїР°, neg, current

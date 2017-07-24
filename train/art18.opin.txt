@@ -1,7 +1,7 @@
-Россия, Украина, neg, current
-Россия, Европа, neg, current
-Европа, Россия, neg, current
-Россия, ИГИЛ, neg, current
-author, Медведев, pos, current
-author, Путин, pos, current
-author, Россия, pos, current
+Р РѕСЃСЃРёСЏ, РЈРєСЂР°РёРЅР°, neg, current
+Р РѕСЃСЃРёСЏ, Р•РІСЂРѕРїР°, neg, current
+Р•РІСЂРѕРїР°, Р РѕСЃСЃРёСЏ, neg, current
+Р РѕСЃСЃРёСЏ, РР“РР›, neg, current
+author, РњРµРґРІРµРґРµРІ, pos, current
+author, РџСѓС‚РёРЅ, pos, current
+author, Р РѕСЃСЃРёСЏ, pos, current

@@ -1,11 +1,11 @@
-НАТО, Россия, neg, current
-Россия, НАТО, neg, current
-Россия, Турция, neg, current
-Турция, Россия, neg, current
-Грушко, Украина, neg, current
-НАТО, Москва, neg, current
-Москва, Украина, neg, current
-Грушко, Киев, neg, current
-НАТО, Москва, neg, current
-Столтенберг, Россия, neg, current
+РќРђРўРћ, Р РѕСЃСЃРёСЏ, neg, current
+Р РѕСЃСЃРёСЏ, РќРђРўРћ, neg, current
+Р РѕСЃСЃРёСЏ, РўСѓСЂС†РёСЏ, neg, current
+РўСѓСЂС†РёСЏ, Р РѕСЃСЃРёСЏ, neg, current
+Р“СЂСѓС€РєРѕ, РЈРєСЂР°РёРЅР°, neg, current
+РќРђРўРћ, РњРѕСЃРєРІР°, neg, current
+РњРѕСЃРєРІР°, РЈРєСЂР°РёРЅР°, neg, current
+Р“СЂСѓС€РєРѕ, РљРёРµРІ, neg, current
+РќРђРўРћ, РњРѕСЃРєРІР°, neg, current
+РЎС‚РѕР»С‚РµРЅР±РµСЂРі, Р РѕСЃСЃРёСЏ, neg, current
 

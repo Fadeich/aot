@@ -1,6 +1,6 @@
-Путин, Шойгу, pos, current
-Шойгу, Путин, pos, current
-Запад, Россия, neg, current
-Путин, Кони, pos, current
-Россия, Украина, neg, current
-author, Путин, pos, current
+РџСѓС‚РёРЅ, РЁРѕР№РіСѓ, pos, current
+РЁРѕР№РіСѓ, РџСѓС‚РёРЅ, pos, current
+Р—Р°РїР°Рґ, Р РѕСЃСЃРёСЏ, neg, current
+РџСѓС‚РёРЅ, РљРѕРЅРё, pos, current
+Р РѕСЃСЃРёСЏ, РЈРєСЂР°РёРЅР°, neg, current
+author, РџСѓС‚РёРЅ, pos, current

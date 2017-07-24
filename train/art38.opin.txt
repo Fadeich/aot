@@ -1,9 +1,9 @@
-Россия, Асад, pos, current
-Путин, Запад, neg, current
-Глава Кремля, Башар Асад, pos, current
-Путин, Асад, pos, current
-Путин, Запад, neg, current
-author, Асад, neg, current
-Foreign Policy, Путин, neg, current
-Foreign Policy, Асад, neg, current
-Foreign Policy, Москва, neg, current
+Р РѕСЃСЃРёСЏ, РђСЃР°Рґ, pos, current
+РџСѓС‚РёРЅ, Р—Р°РїР°Рґ, neg, current
+Р“Р»Р°РІР° РљСЂРµРјР»СЏ, Р‘Р°С€Р°СЂ РђСЃР°Рґ, pos, current
+РџСѓС‚РёРЅ, РђСЃР°Рґ, pos, current
+РџСѓС‚РёРЅ, Р—Р°РїР°Рґ, neg, current
+author, РђСЃР°Рґ, neg, current
+Foreign Policy, РџСѓС‚РёРЅ, neg, current
+Foreign Policy, РђСЃР°Рґ, neg, current
+Foreign Policy, РњРѕСЃРєРІР°, neg, current

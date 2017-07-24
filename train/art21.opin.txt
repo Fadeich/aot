@@ -1,21 +1,21 @@
-США, Китай, neg, current
-США, Россия, neg, current
-Вашигтон, Китай, neg, current
-Вашингтон, Россия, neg, current
-Китай, США, neg, current
-Россия, США, neg, current
-Россия, НАТО, neg, current
-Россия, ЕС, neg, current
-Россия, ООН, pos, current
-Томас Грэм, Россия, neg, current
-Томас Грэм, Москва, neg, current
-Томас Грэм, Путин, neg, current
-США, Москва, neg, current
-Соединенные Штаты, Москва, neg, current
-Европейский Союз, НАТО, pos, past
-НАТО,Европейский Союз, pos, past
-Вашингтон, Путин, neg, present
-Путин, США, neg, present
-Путин, НАТО, neg, present
-Путин, ЕС, neg, present
-Россия, Запад, neg, present
+РЎРЁРђ, РљРёС‚Р°Р№, neg, current
+РЎРЁРђ, Р РѕСЃСЃРёСЏ, neg, current
+Р’Р°С€РёРіС‚РѕРЅ, РљРёС‚Р°Р№, neg, current
+Р’Р°С€РёРЅРіС‚РѕРЅ, Р РѕСЃСЃРёСЏ, neg, current
+РљРёС‚Р°Р№, РЎРЁРђ, neg, current
+Р РѕСЃСЃРёСЏ, РЎРЁРђ, neg, current
+Р РѕСЃСЃРёСЏ, РќРђРўРћ, neg, current
+Р РѕСЃСЃРёСЏ, Р•РЎ, neg, current
+Р РѕСЃСЃРёСЏ, РћРћРќ, pos, current
+РўРѕРјР°СЃ Р“СЂСЌРј, Р РѕСЃСЃРёСЏ, neg, current
+РўРѕРјР°СЃ Р“СЂСЌРј, РњРѕСЃРєРІР°, neg, current
+РўРѕРјР°СЃ Р“СЂСЌРј, РџСѓС‚РёРЅ, neg, current
+РЎРЁРђ, РњРѕСЃРєРІР°, neg, current
+РЎРѕРµРґРёРЅРµРЅРЅС‹Рµ РЁС‚Р°С‚С‹, РњРѕСЃРєРІР°, neg, current
+Р•РІСЂРѕРїРµР№СЃРєРёР№ РЎРѕСЋР·, РќРђРўРћ, pos, past
+РќРђРўРћ,Р•РІСЂРѕРїРµР№СЃРєРёР№ РЎРѕСЋР·, pos, past
+Р’Р°С€РёРЅРіС‚РѕРЅ, РџСѓС‚РёРЅ, neg, present
+РџСѓС‚РёРЅ, РЎРЁРђ, neg, present
+РџСѓС‚РёРЅ, РќРђРўРћ, neg, present
+РџСѓС‚РёРЅ, Р•РЎ, neg, present
+Р РѕСЃСЃРёСЏ, Р—Р°РїР°Рґ, neg, present

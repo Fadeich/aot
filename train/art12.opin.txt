@@ -1,8 +1,8 @@
-Россия, Европейский союз, neg, past
-Европейский союз, Россия, neg, past
-Россия, Европейский союз, pos, current
-Путин, Кудрин, pos, current
-author, Россия, neg, current
-author, Кудрин, neg, current
-author, Путин, neg, current
-author, ИГИЛ, neg, current
+Р РѕСЃСЃРёСЏ, Р•РІСЂРѕРїРµР№СЃРєРёР№ СЃРѕСЋР·, neg, past
+Р•РІСЂРѕРїРµР№СЃРєРёР№ СЃРѕСЋР·, Р РѕСЃСЃРёСЏ, neg, past
+Р РѕСЃСЃРёСЏ, Р•РІСЂРѕРїРµР№СЃРєРёР№ СЃРѕСЋР·, pos, current
+РџСѓС‚РёРЅ, РљСѓРґСЂРёРЅ, pos, current
+author, Р РѕСЃСЃРёСЏ, neg, current
+author, РљСѓРґСЂРёРЅ, neg, current
+author, РџСѓС‚РёРЅ, neg, current
+author, РР“РР›, neg, current

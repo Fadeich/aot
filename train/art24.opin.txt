@@ -1,16 +1,16 @@
-США, Россия, neg, current
-Евросоюз, Россия, neg, current
-G8, Россия, neg, current 
-Советский Союз, Афганистан, neg, past
-Запад, Советский Союз, neg, past
-Коэ, Россия, neg, current
-IAAF, Россия, neg, current
-Путин, IAAF, neg, current
-Штайнмайер, НАТО, neg, current
-Штайнмайер, Россия, pos, current
-author,Советский Союз, pos, current
-Запад, Россия, neg, current
-Путин, Запад, neg, current
-Путин, НАТО, neg, current
-Россия, Путин, pos, current
-Запад, Москва, neg, current
+РЎРЁРђ, Р РѕСЃСЃРёСЏ, neg, current
+Р•РІСЂРѕСЃРѕСЋР·, Р РѕСЃСЃРёСЏ, neg, current
+G8, Р РѕСЃСЃРёСЏ, neg, current 
+РЎРѕРІРµС‚СЃРєРёР№ РЎРѕСЋР·, РђС„РіР°РЅРёСЃС‚Р°РЅ, neg, past
+Р—Р°РїР°Рґ, РЎРѕРІРµС‚СЃРєРёР№ РЎРѕСЋР·, neg, past
+РљРѕСЌ, Р РѕСЃСЃРёСЏ, neg, current
+IAAF, Р РѕСЃСЃРёСЏ, neg, current
+РџСѓС‚РёРЅ, IAAF, neg, current
+РЁС‚Р°Р№РЅРјР°Р№РµСЂ, РќРђРўРћ, neg, current
+РЁС‚Р°Р№РЅРјР°Р№РµСЂ, Р РѕСЃСЃРёСЏ, pos, current
+author,РЎРѕРІРµС‚СЃРєРёР№ РЎРѕСЋР·, pos, current
+Р—Р°РїР°Рґ, Р РѕСЃСЃРёСЏ, neg, current
+РџСѓС‚РёРЅ, Р—Р°РїР°Рґ, neg, current
+РџСѓС‚РёРЅ, РќРђРўРћ, neg, current
+Р РѕСЃСЃРёСЏ, РџСѓС‚РёРЅ, pos, current
+Р—Р°РїР°Рґ, РњРѕСЃРєРІР°, neg, current

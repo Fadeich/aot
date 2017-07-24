@@ -1,20 +1,20 @@
-author, Хрущев, neg, current
-author, Столтенберг, neg, current
-author, Бридлав, neg, current
-author, Штайнмайер, pos, current
-author, Тренин, pos, current
-author, Расмуссен, neg, current
-Запад, Россия, neg, current
-НАТО, Польша, pos, current
-НАТО, Россия, neg, current
-НАТО, Украина, pos, current
-НАТО, Черногория, pos, current
-Россия, НАТО, neg, current
-Соединенные Штаты, Украина, pos, past
-США, Украина, pos, current
-Штайнмайер, НАТО, neg, current
-Эштон Картер, Россия, neg, current
-Эстония, Кремль, neg, current
-Литва, Кремль, neg, current
-Латвия, Кремль, neg, current
-Польша, Кремль, neg, current
+author, РҐСЂСѓС‰РµРІ, neg, current
+author, РЎС‚РѕР»С‚РµРЅР±РµСЂРі, neg, current
+author, Р‘СЂРёРґР»Р°РІ, neg, current
+author, РЁС‚Р°Р№РЅРјР°Р№РµСЂ, pos, current
+author, РўСЂРµРЅРёРЅ, pos, current
+author, Р Р°СЃРјСѓСЃСЃРµРЅ, neg, current
+Р—Р°РїР°Рґ, Р РѕСЃСЃРёСЏ, neg, current
+РќРђРўРћ, РџРѕР»СЊС€Р°, pos, current
+РќРђРўРћ, Р РѕСЃСЃРёСЏ, neg, current
+РќРђРўРћ, РЈРєСЂР°РёРЅР°, pos, current
+РќРђРўРћ, Р§РµСЂРЅРѕРіРѕСЂРёСЏ, pos, current
+Р РѕСЃСЃРёСЏ, РќРђРўРћ, neg, current
+РЎРѕРµРґРёРЅРµРЅРЅС‹Рµ РЁС‚Р°С‚С‹, РЈРєСЂР°РёРЅР°, pos, past
+РЎРЁРђ, РЈРєСЂР°РёРЅР°, pos, current
+РЁС‚Р°Р№РЅРјР°Р№РµСЂ, РќРђРўРћ, neg, current
+Р­С€С‚РѕРЅ РљР°СЂС‚РµСЂ, Р РѕСЃСЃРёСЏ, neg, current
+Р­СЃС‚РѕРЅРёСЏ, РљСЂРµРјР»СЊ, neg, current
+Р›РёС‚РІР°, РљСЂРµРјР»СЊ, neg, current
+Р›Р°С‚РІРёСЏ, РљСЂРµРјР»СЊ, neg, current
+РџРѕР»СЊС€Р°, РљСЂРµРјР»СЊ, neg, current

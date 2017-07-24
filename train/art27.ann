@@ -244,8 +244,3 @@ T243	LOC 8273 8280	Украины
 T244	LOC 8301 8307	России
 T245	PER 8338 8344	Author
 T246	PER 8346 8353	Unknown
-R1	Negative Arg1:T5 Arg2:T7	
-R2	Negative Arg1:T6 Arg2:T7	
-R3	Negative Arg1:T7 Arg2:T5	
-R4	Neutral Arg1:T12 Arg2:T13	
-R5	Negative Arg1:T14 Arg2:T12	

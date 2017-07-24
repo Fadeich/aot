@@ -1,13 +1,13 @@
-Биньямин Нетаньяху, Владимир Путин, pos, current
-Владимир Путин, Биньямин Нетаньяху, pos, current
-author, Путин, neg, current
-author, Россия, neg, current
-author, США, pos, current
-author, Иран, neg, current
-author, Израиль, pos, current
-Россия, Иран, pos, current
-Россия, Сирия, pos, current
-Россия, Израиль, pos, current
-Израиль, Россия, pos, current
-Шамир, Хусейн, pos, current
-Хусейн, Шамир, pos, current
+Р‘РёРЅСЊСЏРјРёРЅ РќРµС‚Р°РЅСЊСЏС…Сѓ, Р’Р»Р°РґРёРјРёСЂ РџСѓС‚РёРЅ, pos, current
+Р’Р»Р°РґРёРјРёСЂ РџСѓС‚РёРЅ, Р‘РёРЅСЊСЏРјРёРЅ РќРµС‚Р°РЅСЊСЏС…Сѓ, pos, current
+author, РџСѓС‚РёРЅ, neg, current
+author, Р РѕСЃСЃРёСЏ, neg, current
+author, РЎРЁРђ, pos, current
+author, РСЂР°РЅ, neg, current
+author, РР·СЂР°РёР»СЊ, pos, current
+Р РѕСЃСЃРёСЏ, РСЂР°РЅ, pos, current
+Р РѕСЃСЃРёСЏ, РЎРёСЂРёСЏ, pos, current
+Р РѕСЃСЃРёСЏ, РР·СЂР°РёР»СЊ, pos, current
+РР·СЂР°РёР»СЊ, Р РѕСЃСЃРёСЏ, pos, current
+РЁР°РјРёСЂ, РҐСѓСЃРµР№РЅ, pos, current
+РҐСѓСЃРµР№РЅ, РЁР°РјРёСЂ, pos, current

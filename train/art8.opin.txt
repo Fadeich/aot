@@ -1,12 +1,12 @@
-Путин, ЕС, neg, current
-Путин, Европа, neg, current
-Украина, Путин, neg, current
-Путин, Украина, neg, current
-Европа, Россия, neg, current
-Украина, Россия, neg, current
-Россия, Украина, neg, current
-Климкин, Россия, neg, current
-Климкин, Украина, pos, current
-Климкин, Путин, neg, current
-Климкин, ЕС, pos, current
-Климкин, Донбасс, neg, current
+РџСѓС‚РёРЅ, Р•РЎ, neg, current
+РџСѓС‚РёРЅ, Р•РІСЂРѕРїР°, neg, current
+РЈРєСЂР°РёРЅР°, РџСѓС‚РёРЅ, neg, current
+РџСѓС‚РёРЅ, РЈРєСЂР°РёРЅР°, neg, current
+Р•РІСЂРѕРїР°, Р РѕСЃСЃРёСЏ, neg, current
+РЈРєСЂР°РёРЅР°, Р РѕСЃСЃРёСЏ, neg, current
+Р РѕСЃСЃРёСЏ, РЈРєСЂР°РёРЅР°, neg, current
+РљР»РёРјРєРёРЅ, Р РѕСЃСЃРёСЏ, neg, current
+РљР»РёРјРєРёРЅ, РЈРєСЂР°РёРЅР°, pos, current
+РљР»РёРјРєРёРЅ, РџСѓС‚РёРЅ, neg, current
+РљР»РёРјРєРёРЅ, Р•РЎ, pos, current
+РљР»РёРјРєРёРЅ, Р”РѕРЅР±Р°СЃСЃ, neg, current

@@ -296,64 +296,6 @@ T298	PER 10580 10597	Карлушем Кейрушем
 T299	LOC 10621 10626	Ирана
 T300	PER 10653 10659	Author
 T301	PER 10661 10668	Unknown
-R1	Negative Arg1:T7 Arg2:T9	
-R2	Negative Arg1:T7 Arg2:T8	
-R3	Negative Arg1:T8 Arg2:T9	
-R4	Negative Arg1:T9 Arg2:T8	
-R5	Negative Arg1:T26 Arg2:T27	
-R6	Negative Arg1:T27 Arg2:T26	
-R7	Negative Arg1:T31 Arg2:T32	
-R8	Negative Arg1:T36 Arg2:T38	
-R9	Negative Arg1:T37 Arg2:T38	
-*	Equiv T45 T46
-R10	Negative Arg1:T41 Arg2:T43	
-R11	Negative Arg1:T42 Arg2:T43	
-R12	Negative Arg1:T41 Arg2:T45	
-R13	Negative Arg1:T42 Arg2:T45	
-R14	Negative Arg1:T51 Arg2:T50	
-R15	Negative Arg1:T75 Arg2:T76	
-R16	Negative Arg1:T75 Arg2:T77	
-R17	Negative Arg1:T99 Arg2:T100	
-*	Equiv T110 T115
-R18	Negative Arg1:T114 Arg2:T115	
-R19	Negative Arg1:T149 Arg2:T151	
-R20	Negative Arg1:T150 Arg2:T151	
-R21	Negative Arg1:T153 Arg2:T151	
-R22	Negative Arg1:T151 Arg2:T153	
-R23	Negative Arg1:T157 Arg2:T159	
-R24	Negative Arg1:T158 Arg2:T159	
-R25	Negative Arg1:T163 Arg2:T165	
-R26	Negative Arg1:T164 Arg2:T165	
-R27	Negative Arg1:T165 Arg2:T166	
-R28	Negative Arg1:T169 Arg2:T170	
-R29	Negative Arg1:T170 Arg2:T169	
 T302	LOC 5833 5847	востоке Европы
-R30	Negative Arg1:T176 Arg2:T302	
-R31	Negative Arg1:T302 Arg2:T176	
-R32	Negative Arg1:T178 Arg2:T302	
-R33	Negative Arg1:T179 Arg2:T302	
-R34	Negative Arg1:T180 Arg2:T302	
-R35	Negative Arg1:T120 Arg2:T119	
-R36	Positive Arg1:T131 Arg2:T132	
-*	Equiv T184 T186
-R37	Negative Arg1:T183 Arg2:T186	
-R38	Negative Arg1:T191 Arg2:T193	
-*	Equiv T191 T194
-R39	Positive Arg1:T204 Arg2:T205	
-R40	Positive Arg1:T205 Arg2:T204	
-R41	Positive Arg1:T212 Arg2:T213	
-R42	Negative Arg1:T212 Arg2:T214	
-R43	Negative Arg1:T230 Arg2:T233	
-R44	Negative Arg1:T234 Arg2:T236	
-R45	Negative Arg1:T234 Arg2:T237	
-R46	Negative Arg1:T236 Arg2:T240	
-R47	Negative Arg1:T237 Arg2:T240	
 T177	PER 9391 9413	премьер-министр Италии
-R48	Negative Arg1:T177 Arg2:T267	
-R49	Negative Arg1:T270 Arg2:T267	
-R50	Negative Arg1:T272 Arg2:T267	
 T269	PER 9917 9937	главы немецкого МИДа
-R51	Negative Arg1:T269 Arg2:T284	
-R52	Positive Arg1:T284 Arg2:T285	
-R53	Positive Arg1:T288 Arg2:T289	
-R54	Positive Arg1:T289 Arg2:T288	

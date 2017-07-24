@@ -1,7 +1,7 @@
-Штайнмайер, Россия, pos, current
-Зоммер, Путин, pos, current
-author, Путин, neg, current
-author, Зоммер, neg, current
-author, Штайнмайер, neg, current
-Ангела Меркель, Россия, neg, current
-Зоммер, Россия, pos, current
+РЁС‚Р°Р№РЅРјР°Р№РµСЂ, Р РѕСЃСЃРёСЏ, pos, current
+Р—РѕРјРјРµСЂ, РџСѓС‚РёРЅ, pos, current
+author, РџСѓС‚РёРЅ, neg, current
+author, Р—РѕРјРјРµСЂ, neg, current
+author, РЁС‚Р°Р№РЅРјР°Р№РµСЂ, neg, current
+РђРЅРіРµР»Р° РњРµСЂРєРµР»СЊ, Р РѕСЃСЃРёСЏ, neg, current
+Р—РѕРјРјРµСЂ, Р РѕСЃСЃРёСЏ, pos, current
