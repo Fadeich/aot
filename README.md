@@ -1,15 +1,15 @@
 # aot
 ### Load dictionary
 
-import pickle
+    import pickle
 
-from collections import namedtuple
+    from collections import namedtuple
 
-features = namedtuple('features', ['word', 'part_of_speech', 'tonality', 'source', 'extra'])
+    features = namedtuple('features', ['word', 'part_of_speech', 'tonality', 'source', 'extra'])
 
-with open('dict.pickle', 'rb') as f:
+    with open('dict.pickle', 'rb') as f:
 
-    Dict = pickle.load(f)
+        Dict = pickle.load(f)
     
 ### Example
 
