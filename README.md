@@ -2,7 +2,6 @@
 ### Load dictionary
 
     import pickle
-
     from collections import namedtuple
 
     features = namedtuple('features', ['word', 'part_of_speech', 'tonality', 'source', 'extra'])
