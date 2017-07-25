@@ -29,7 +29,6 @@
 Сергей Иванов, Запад, neg, past
 Николай Патрушев, США, neg, current
 Путин, США, neg, current
-Мадлен Олбрайт, neg, past
 author, Путин, neg, current
 author, Мария Снеговая, pos, current
 Мария Снеговая, Путин, neg, current
