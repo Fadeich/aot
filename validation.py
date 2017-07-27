@@ -35,8 +35,9 @@ def validate(set_of_doc_numbers):
     recall_denominator = 0
 
     for i in set_of_doc_numbers:
-        solution_file_path = "solutions/solution" + str(i) + ".txt"
-        answer_file_path = "train/art" + str(i) + ".opin.txt"
+        file_name = "art" + str(i) + ".opin.txt"
+        solution_file_path = "test/" + file_name
+        answer_file_path = "train/" + file_name
         if os.path.isfile(solution_file_path) and os.path.isfile(answer_file_path):
             solution_file = open(solution_file_path, "r")
             answer_file = open(answer_file_path, "r")
