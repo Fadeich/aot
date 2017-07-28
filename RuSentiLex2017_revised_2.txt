@@ -858,9 +858,7 @@
 бодряцкий, Adj, бодряцкий, negative, opinion
 бодряческий, Adj, бодряческий, negative, opinion
 бодяга, Noun, бодяга, negative, opinion, "КАНИТЕЛЬ, КАНИТЕЛЬНОЕ ДЕЛО"
-бодяга, Noun, бодяга, neutral, fact, "ПРЕСНОВОДНАЯ ГУБКА"
-боевик, Noun, боевик, negative, fact, "УЧАСТНИК ВООРУЖЕННОГО ФОРМИРОВАНИЯ" 
-боевик, Noun, боевик, positive, fact, "БОЕВИК (ОСТРОСЮЖЕТНЫЙ ФИЛЬМ)" 
+бодяга, Noun, бодяга, neutral, fact, "ПРЕСНОВОДНАЯ ГУБКА" 
 боевое искусство, NG, боевой искусство, neutral, fact
 божеее, Interjection, божее, negative, feeling
 божеский, Adj, божеский, positive, opinion

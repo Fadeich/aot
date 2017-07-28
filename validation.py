@@ -20,40 +20,29 @@ def read_file(file):
     return content
 
 
-def validate(set_of_doc_numbers):
-    """Check quality of the solution.
-    
-    This function takes a set of numbers of documents as input, computes several quality metrics of the solution
-    and returns a namedtuple with them.
-    Computed metrics are
-    1. precision
-    2. recall
-    3. F1-measure
-    """
+def validate():
+    """Check quality of the solution."""
     true_positives = 0
     precision_denominator = 0
     recall_denominator = 0
 
-    for i in set_of_doc_numbers:
-        file_name = "art" + str(i) + ".opin.txt"
-        solution_file_path = "test/" + file_name
-        answer_file_path = "train/" + file_name
-        if os.path.isfile(solution_file_path) and os.path.isfile(answer_file_path):
-            solution_file = open(solution_file_path, "r")
-            answer_file = open(answer_file_path, "r")
-            our_answers = read_file(solution_file)
-            correct_answers = read_file(answer_file)
-            true_positives += len(our_answers & correct_answers)
-            precision_denominator += len(our_answers)
-            recall_denominator += len(correct_answers)
+    for d, dirs, files in os.walk("test/"):
+        for file in files:
+            if file.endswith(".opin.txt"):
+                if file[4].isdigit():
+                    file_num = file[3:5]
+                else:
+                    file_num = file[3]
+                solution_file = open("test/art" + file_num + ".opin.txt", "r")
+                answer_file = open("train/art" + file_num + ".opin.txt", "r")
+                our_answers = read_file(solution_file)
+                correct_answers = read_file(answer_file)
+                true_positives += len(our_answers & correct_answers)
+                precision_denominator += len(our_answers)
+                recall_denominator += len(correct_answers)
 
     estimation = namedtuple("estimation", ["precision", "recall", "f1_measure"])
     precision = true_positives / precision_denominator
     recall = true_positives / recall_denominator
     f1_measure = 2 / (1 / precision + 1 / recall)
     return estimation(precision, recall, f1_measure)
-
-
-s = set()
-s.add(1)
-print(validate(s))

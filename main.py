@@ -1,7 +1,7 @@
 import os
 import re
 from pymystem3 import Mystem
-
+import validation
 
 # ToDo: (important) check if a word is an entity and correct it's register and for other make lowercase
 # ToDo: there are operators of len >= 2, but the cannot be found in list of words (sentence)
@@ -20,7 +20,6 @@ def read_sentiment_file():  # tested
     for line in sentiment_file:
         if len(line) > 0 and line[0] != "!":
             sentimental_words[re.split("\W+", line)[0]] = re.split("\W+", line)[3]
-    print(sentimental_words)
     return sentimental_words
 
 
@@ -32,101 +31,78 @@ def read_input_file(file_number, lemmatizer):  # tested
         line = line.split(None, 2)
         if len(line) > 2:
             line = line[2].strip()
-            sentence = lemmatizer.lemmatize(line)
-            sentence = "".join(sentence)
-            line = re.split("\W+", line)
-            sentence = re.split("\W+", sentence)
-            line = list(filter(lambda a: a, line))
-            sentence = list(filter(lambda a: a, sentence))
-
-            for i in range(len(line)):
-                if line[i].isupper():
-                    sentence[i] = sentence[i].upper()
-                elif line[i][0].isupper():
-                    sentence[i] = sentence[i].capitalize()
+            sentence = lemmatize_with_case_saving(lemmatizer, line)
             sentence = " ".join(sentence)
             sentences.append(sentence)
     return sentences
+
+
+def lemmatize_with_case_saving(lemmatizer, line):
+    sentence = lemmatizer.lemmatize(line)
+    sentence = "".join(sentence)
+    line = re.split("\W+", line)
+    sentence = re.split("\W+", sentence)
+    line = list(filter(lambda a: a, line))
+    sentence = list(filter(lambda a: a, sentence))
+
+    for i in range(len(line)):
+        if line[i].isupper():
+            sentence[i] = sentence[i].upper()
+        elif line[i][0].isupper():
+            sentence[i] = sentence[i].capitalize()
+    return sentence
 
 
 def is_latin(word):  # tested
     return (word[0] >= "a" and word[0] <= "z") or (word[0] >= 'A' and word[0] <= 'Z')
 
 
-def read_file_with_entities(file_number):
+def read_file_with_entities(file_number, lemmatizer):  # tested
     """Returns set of entities"""
-    file_name = "test/art" + str(file_number) + ".txt"
+    file_name = "test/art" + str(file_number) + ".ann"
     file = open(file_name, "r")
     set_of_entities = set()
     for line in file:
-        set_of_entities.add(line.rsplit(None, 1)[1])
+        line = line.split(None, 4)
+        if len(line) < 5:
+            continue
+        word = line[4]
+        if not is_latin(word):
+            set_of_entities.add(" ".join(lemmatize_with_case_saving(lemmatizer, word)))
     return set_of_entities
 
 
-def read_sentimental_words():
-    print()
-
-def read_syntaxnet(file_number):  # tested
-    """Read a syntaxnet output file for one document and return list of sentences"""
-    # fr = pd.read_csv("syntaxnet_output_with_tone.csv", sep="\t", encoding="utf-8")
-    tokens = []
-    file_name = "output/syntaxnet_output" + str(file_number) + ".csv"
-    file = open(file_name, "r")
-    for line in file:
-        line = line.strip()
-        token = line.split("\t")[1:]
-        if token[0] != "word" and len(token) == 9:  # crutch
-            tokens.append(token)
-    sentences = []
-    cur_sentence = []
-    cur_sentence_id = "1"
-    for token in tokens:
-        if token[6] != cur_sentence_id:
-            sentences.append(cur_sentence)
-            cur_sentence = []
-            cur_sentence_id = token[6]
-        cur_sentence.append(token)
-
-    return sentences
-
-
-def find_entities(sentence):  # tested
-    lemmatized_form = 5
+def find_entities(sentence, entities):  # tested
     entities_in_sentence = set()
-    for word in sentence:
-        if is_entity(word):
-            entities_in_sentence.add(word[lemmatized_form])
+    for entity in entities:
+        if entity in sentence:
+            entities_in_sentence.add(entity)
     return entities_in_sentence
 
 
-def is_entity(word):  # tested
-    if word[8] != "0" and not is_latin(word[1].lower()):
-        return True
-    else:
-        return False
-
-
-def calculate_sentiment(sentence, operators):  # tested
-    lemmatized_form = 5
-    sentiment_label = 7
-    for i in range(len(sentence)):
-        if sentence[i][lemmatized_form] in operators:
-            for j in range(i + 1, len(sentence)):
-                if sentence[j][sentiment_label] == "0":
+def calculate_sentiment(sentence, sentimental_words, operators, set_of_entities):  # tested
+    list_of_words = sentence.split()
+    for i in range(len(list_of_words)):
+        if list_of_words[i] in sentimental_words:
+            if sentimental_words[list_of_words[i]] == "positive":
+                list_of_words[i] = [list_of_words[i], 1]
+            elif sentimental_words[list_of_words[i]] == "negative":
+                list_of_words[i] = [list_of_words[i], -1]
+            else:
+                list_of_words[i] = [list_of_words[i], 0]
+        else:
+            list_of_words[i] = [list_of_words[i], 0]
+    for i in range(len(list_of_words)):
+        if list_of_words[i][0] in operators:
+            for j in range(i + 1, len(list_of_words)):
+                if list_of_words[j][1] == 0:
                     break
                 else:
-                    new_value = int(sentence[j][sentiment_label]) * operators[sentence[i][lemmatized_form]]
-                    sentence[j][sentiment_label] = str(int(new_value))
-            for j in reversed(range(i - 1)):
-                if sentence[j][sentiment_label] == "0":
-                    break
-                else:
-                    new_value = int(sentence[j][sentiment_label]) * operators[sentence[i][lemmatized_form]]
-                    sentence[j][sentiment_label] = str(int(new_value))
+                    list_of_words[j][1] *= operators[list_of_words[i][0]]
 
     sentiment = 0
-    for word in sentence:
-        sentiment += int(word[sentiment_label])
+    for word in list_of_words:
+        sentiment += word[1]
     if sentiment < 0:
         return "neg"
     elif sentiment > 0:
@@ -135,25 +111,30 @@ def calculate_sentiment(sentence, operators):  # tested
         return ""
 
 
-def find_pairs_of_related_entities(sentence, sentiment):  # tested
+def find_pairs_of_related_entities(sentence, sentiment, set_of_entities):  # tested
     """Return set of triples (entity, entity, sentiment)
 
     Just takes as a subject the first entity in sentence and as object the last entity in sentence
     """
-    lemmatized_form = 5
+    resulting_set = set()
+    list_of_entities = list(set_of_entities)
     subject_entity = ""
     object_entity = ""
-    resulting_set = set()
-    for word in sentence:
-        if is_entity(word):
-            subject_entity = word[lemmatized_form]
-            break
-    for word in reversed(sentence):
-        if is_entity(word):
-            object_entity = word[lemmatized_form]
-            break
-    resulting_set.add(tuple([subject_entity, object_entity, sentiment]))
+    for entity1 in list_of_entities:
+        for entity2 in list_of_entities:
+            if adjusted_additional_requirements(entity1, entity2):
+                subject_entity = entity1
+                object_entity = entity2
+                resulting_set.add(tuple([subject_entity, object_entity, sentiment]))
     return resulting_set
+
+
+def adjusted_additional_requirements(entity1, entity2):
+    if entity1 in entity2 or entity2 in entity1:
+        return False
+    if len(entity1) >= 25 or len(entity2) >= 25:
+        return False
+    return True
 
 
 def write_in_resulting_file(file_num, set_of_relations):  # tested
@@ -177,17 +158,24 @@ def main():
                 else:
                     file_num = int(file[3])
                 sentences = read_input_file(file_num, lemmatizer)
+                entities = read_file_with_entities(file_num, lemmatizer)
                 for sentence in sentences:
-                    entity_set = find_entities(sentence)
-                    if len(entity_set) > 1:
-                        sentiment = calculate_sentiment(sentence, operators)
+                    entities_in_sentence = find_entities(sentence, entities)
+                    if len(entities_in_sentence) > 1:
+                        sentiment = calculate_sentiment(sentence,
+                                                        sentimental_words,
+                                                        operators,
+                                                        entities_in_sentence)
                         if sentiment != "":
-                            set_of_relations |= find_pairs_of_related_entities(sentence, sentiment)
+                            set_of_relations |= find_pairs_of_related_entities(sentence,
+                                                                               sentiment,
+                                                                               entities_in_sentence)
                 write_in_resulting_file(file_num, set_of_relations)
                 set_of_relations = set()
 
 
 main()
+print(validation.validate())
 
 # Можно брать местоимения в тексте и заменять их на сущности, разберись ещё, в каких случаях надо разрешать
 # анафору
