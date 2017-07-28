@@ -2,6 +2,7 @@ import os
 import re
 from pymystem3 import Mystem
 import validation
+import make_feat_2
 
 
 # ToDo: there are operators of len >= 2, but the cannot be found in list of words (sentence)
@@ -137,16 +138,12 @@ def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentim
     list_of_entities = list(dict_of_entities)
     for entity1 in list_of_entities:
         for entity2 in list_of_entities:
-            if sentence.find(entity1) <= margin:
-                pass
-            else:
-                continue
-            if margin + 40 <= sentence.find(entity2):
-                pass
-            else:
-                continue
-            if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence, capital_dict):
-                resulting_set.add(tuple([entity1, entity2, sentiment]))
+            if sentence.find(entity1) < margin < sentence.find(entity2):
+                if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence, capital_dict):
+                    resulting_set.add(tuple([entity1, entity2, sentiment]))
+    #entity1 = first_entity(dict_of_entities, sentence)
+    #entity2 = last_entity(dict_of_entities, sentence)
+
     return resulting_set
 
 
@@ -187,14 +184,12 @@ def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentenc
         return False
     if is_capital(entity1, entity2, capital_dict):
         return False
-    if dict_of_entities[entity2] == "PER" and dict_of_entities[entity1] != "PER":
-        return False
+    #if dict_of_entities[entity2] == "PER" and dict_of_entities[entity1] != "PER":
+    #    return False
     #if dict_of_entities[entity2] != "PER" and dict_of_entities[entity1] == "PER":
     #    return False
-    #if dict_of_entities[entity1] != dict_of_entities[entity2]:
-    #    return False
-    #if sentence.find(entity1) > sentence.find(entity2):
-    #    return False
+    if sentence.find(entity1) > sentence.find(entity2):
+        return False
     return True
 
 
@@ -203,8 +198,8 @@ def read_capital_dictionary():
     capitals = {}
     for line in file:
         line = line.split("\t")
-        capitals[line[0]] = line[1]
-        capitals[line[1]] = line[0]
+        capitals[line[0].strip()] = line[1].strip()
+        capitals[line[1].strip()] = line[0].strip()
     file.close()
     return capitals
 
@@ -255,6 +250,31 @@ def main():
                                                                                capital_dict)
                 write_in_resulting_file(file_num, set_of_relations)
                 set_of_relations = set()
+
+    inverted_indices = list(make_feat_2.module_check("test", "train", 0.2))
+    for d, dirs, files in os.walk(dir_name):
+        for file in files:
+            if file.endswith(".opin.txt"):
+                list_of_lines = []
+                change_file = open(dir_name + "/" + file, "r")
+                for line in change_file:
+                    list_of_lines.append(line)
+                for i in range(len(list_of_lines)):
+                    if inverted_indices[i]:
+                        str = list_of_lines[i][-4:]
+                        if str == "pos\n":
+                            list_of_lines[i] = list_of_lines[i][:-4] + str
+                            #str = "neg\n"
+                        else:
+                            #str = "pos\n"
+                            list_of_lines[i] = ""
+
+                inverted_indices = inverted_indices[len(list_of_lines):]
+                change_file.close()
+                change_file = open(dir_name + "/" + file, "w")
+                for line in list_of_lines:
+                    change_file.write(line)
+                change_file.close()
 
 
 main()

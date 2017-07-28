@@ -2,8 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3fe594b-299f-4e1c-bdbe-3a0969e0b214" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validation.py" afterPath="$PROJECT_DIR$/validation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistics_of_launches.txt" afterPath="$PROJECT_DIR$/statistics_of_launches.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art1.opin.txt" afterPath="$PROJECT_DIR$/test/art1.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art10.opin.txt" afterPath="$PROJECT_DIR$/test/art10.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art11.opin.txt" afterPath="$PROJECT_DIR$/test/art11.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art12.opin.txt" afterPath="$PROJECT_DIR$/test/art12.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art13.opin.txt" afterPath="$PROJECT_DIR$/test/art13.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art14.opin.txt" afterPath="$PROJECT_DIR$/test/art14.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art15.opin.txt" afterPath="$PROJECT_DIR$/test/art15.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art16.opin.txt" afterPath="$PROJECT_DIR$/test/art16.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art17.opin.txt" afterPath="$PROJECT_DIR$/test/art17.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art19.opin.txt" afterPath="$PROJECT_DIR$/test/art19.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art2.opin.txt" afterPath="$PROJECT_DIR$/test/art2.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art21.opin.txt" afterPath="$PROJECT_DIR$/test/art21.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art23.opin.txt" afterPath="$PROJECT_DIR$/test/art23.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art24.opin.txt" afterPath="$PROJECT_DIR$/test/art24.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art25.opin.txt" afterPath="$PROJECT_DIR$/test/art25.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art27.opin.txt" afterPath="$PROJECT_DIR$/test/art27.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art28.opin.txt" afterPath="$PROJECT_DIR$/test/art28.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art3.opin.txt" afterPath="$PROJECT_DIR$/test/art3.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art30.opin.txt" afterPath="$PROJECT_DIR$/test/art30.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art32.opin.txt" afterPath="$PROJECT_DIR$/test/art32.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art34.opin.txt" afterPath="$PROJECT_DIR$/test/art34.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art35.opin.txt" afterPath="$PROJECT_DIR$/test/art35.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art36.opin.txt" afterPath="$PROJECT_DIR$/test/art36.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art39.opin.txt" afterPath="$PROJECT_DIR$/test/art39.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art4.opin.txt" afterPath="$PROJECT_DIR$/test/art4.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art40.opin.txt" afterPath="$PROJECT_DIR$/test/art40.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art41.opin.txt" afterPath="$PROJECT_DIR$/test/art41.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art42.opin.txt" afterPath="$PROJECT_DIR$/test/art42.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art43.opin.txt" afterPath="$PROJECT_DIR$/test/art43.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art44.opin.txt" afterPath="$PROJECT_DIR$/test/art44.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art46.opin.txt" afterPath="$PROJECT_DIR$/test/art46.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art47.opin.txt" afterPath="$PROJECT_DIR$/test/art47.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art49.opin.txt" afterPath="$PROJECT_DIR$/test/art49.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art5.opin.txt" afterPath="$PROJECT_DIR$/test/art5.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art50.opin.txt" afterPath="$PROJECT_DIR$/test/art50.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art51.opin.txt" afterPath="$PROJECT_DIR$/test/art51.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art52.opin.txt" afterPath="$PROJECT_DIR$/test/art52.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art53.opin.txt" afterPath="$PROJECT_DIR$/test/art53.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art54.opin.txt" afterPath="$PROJECT_DIR$/test/art54.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art55.opin.txt" afterPath="$PROJECT_DIR$/test/art55.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art56.opin.txt" afterPath="$PROJECT_DIR$/test/art56.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art57.opin.txt" afterPath="$PROJECT_DIR$/test/art57.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art58.opin.txt" afterPath="$PROJECT_DIR$/test/art58.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art6.opin.txt" afterPath="$PROJECT_DIR$/test/art6.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art60.opin.txt" afterPath="$PROJECT_DIR$/test/art60.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art61.opin.txt" afterPath="$PROJECT_DIR$/test/art61.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art62.opin.txt" afterPath="$PROJECT_DIR$/test/art62.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art63.opin.txt" afterPath="$PROJECT_DIR$/test/art63.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art64.opin.txt" afterPath="$PROJECT_DIR$/test/art64.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art65.opin.txt" afterPath="$PROJECT_DIR$/test/art65.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art66.opin.txt" afterPath="$PROJECT_DIR$/test/art66.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art67.opin.txt" afterPath="$PROJECT_DIR$/test/art67.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art68.opin.txt" afterPath="$PROJECT_DIR$/test/art68.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art69.opin.txt" afterPath="$PROJECT_DIR$/test/art69.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art7.opin.txt" afterPath="$PROJECT_DIR$/test/art7.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art71.opin.txt" afterPath="$PROJECT_DIR$/test/art71.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art72.opin.txt" afterPath="$PROJECT_DIR$/test/art72.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art73.opin.txt" afterPath="$PROJECT_DIR$/test/art73.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art74.opin.txt" afterPath="$PROJECT_DIR$/test/art74.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art75.opin.txt" afterPath="$PROJECT_DIR$/test/art75.opin.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/art8.opin.txt" afterPath="$PROJECT_DIR$/test/art8.opin.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,15 +75,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/aot$main.coverage" NAME="main Coverage Results" MODIFIED="1501255112093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/aot$main.coverage" NAME="main Coverage Results" MODIFIED="1501264738116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/validation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            <state relative-caret-position="146">
+              <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -32,22 +94,31 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="162" column="0" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+            <state relative-caret-position="13">
+              <caret line="203" column="19" lean-forward="true" selection-start-line="203" selection-start-column="19" selection-end-line="203" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#203#464#0" expanded="false" />
-                <element signature="e#508#809#0" expanded="false" />
-                <element signature="e#1393#1845#0" expanded="false" />
-                <element signature="e#1882#1939#0" expanded="false" />
-                <element signature="e#2506#2682#0" expanded="false" />
-                <element signature="e#5110#5341#0" expanded="false" />
-                <element signature="e#5393#5625#0" expanded="false" />
-                <element signature="e#5657#5710#0" expanded="false" />
-                <element signature="e#5815#6477#0" expanded="false" />
-                <element signature="e#6515#6748#0" expanded="false" />
-                <element signature="e#6799#6875#0" expanded="false" />
-                <element signature="e#6949#7161#0" expanded="false" />
+                <element signature="e#222#483#0" expanded="false" />
+                <element signature="e#527#828#0" expanded="false" />
+                <element signature="e#1412#1864#0" expanded="false" />
+                <element signature="e#1901#1958#0" expanded="false" />
+                <element signature="e#2525#2701#0" expanded="false" />
+                <element signature="e#5091#5322#0" expanded="false" />
+                <element signature="e#5374#5606#0" expanded="false" />
+                <element signature="e#5638#5691#0" expanded="false" />
+                <element signature="e#6726#6802#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make_feat_2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/make_feat_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,9 +128,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
       <find>Белый дом</find>
       <find>train</find>
+      <find>print</find>
+      <find>foo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -69,6 +141,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/validation.py" />
+        <option value="$PROJECT_DIR$/make_feat-2.py" />
+        <option value="$PROJECT_DIR$/make_feat_2.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -102,7 +176,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,10 +187,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/make_feat-2.py" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -212,49 +287,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#203#464#0" expanded="false" />
-            <element signature="e#508#809#0" expanded="false" />
-            <element signature="e#1393#1845#0" expanded="false" />
-            <element signature="e#1882#1939#0" expanded="false" />
-            <element signature="e#2506#2682#0" expanded="false" />
-            <element signature="e#5110#5341#0" expanded="false" />
-            <element signature="e#5393#5625#0" expanded="false" />
-            <element signature="e#5657#5710#0" expanded="false" />
-            <element signature="e#5815#6477#0" expanded="false" />
-            <element signature="e#6515#6748#0" expanded="false" />
-            <element signature="e#6799#6875#0" expanded="false" />
-            <element signature="e#6949#7161#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
+        <state relative-caret-position="646">
           <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -264,22 +297,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="162" column="0" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+        <state relative-caret-position="2805">
+          <caret line="165" column="0" lean-forward="true" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#203#464#0" expanded="false" />
-            <element signature="e#508#809#0" expanded="false" />
-            <element signature="e#1393#1845#0" expanded="false" />
-            <element signature="e#1882#1939#0" expanded="false" />
-            <element signature="e#2506#2682#0" expanded="false" />
-            <element signature="e#5110#5341#0" expanded="false" />
-            <element signature="e#5393#5625#0" expanded="false" />
-            <element signature="e#5657#5710#0" expanded="false" />
-            <element signature="e#5815#6477#0" expanded="false" />
-            <element signature="e#6515#6748#0" expanded="false" />
-            <element signature="e#6799#6875#0" expanded="false" />
-            <element signature="e#6949#7161#0" expanded="false" />
+            <element signature="e#222#483#0" expanded="false" />
+            <element signature="e#527#828#0" expanded="false" />
+            <element signature="e#1412#1864#0" expanded="false" />
+            <element signature="e#1901#1958#0" expanded="false" />
+            <element signature="e#2525#2701#0" expanded="false" />
+            <element signature="e#5091#5322#0" expanded="false" />
+            <element signature="e#5374#5606#0" expanded="false" />
+            <element signature="e#5638#5691#0" expanded="false" />
+            <element signature="e#6726#6802#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#222#483#0" expanded="false" />
+            <element signature="e#527#828#0" expanded="false" />
+            <element signature="e#1412#1864#0" expanded="false" />
+            <element signature="e#1901#1958#0" expanded="false" />
+            <element signature="e#2525#2701#0" expanded="false" />
+            <element signature="e#5091#5322#0" expanded="false" />
+            <element signature="e#5374#5606#0" expanded="false" />
+            <element signature="e#5638#5691#0" expanded="false" />
+            <element signature="e#6726#6802#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make_feat-2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make_feat_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="203" column="19" lean-forward="true" selection-start-line="203" selection-start-column="19" selection-end-line="203" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#222#483#0" expanded="false" />
+            <element signature="e#527#828#0" expanded="false" />
+            <element signature="e#1412#1864#0" expanded="false" />
+            <element signature="e#1901#1958#0" expanded="false" />
+            <element signature="e#2525#2701#0" expanded="false" />
+            <element signature="e#5091#5322#0" expanded="false" />
+            <element signature="e#5374#5606#0" expanded="false" />
+            <element signature="e#5638#5691#0" expanded="false" />
+            <element signature="e#6726#6802#0" expanded="false" />
           </folding>
         </state>
       </provider>
