@@ -116,7 +116,7 @@ def calculate_sentiment(sentence, sentimental_words, operators, set_of_entities)
             sentiment += word[1]
     if not sentiment_flag:
         return ""
-    threshold = 1
+    threshold = 0
     if sentiment <= threshold:
         return "neg"
     elif sentiment > threshold:
@@ -140,10 +140,10 @@ def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentim
     list_of_entities = list(dict_of_entities)
     for entity1 in list_of_entities:
         for entity2 in list_of_entities:
-            #if sentence.find(entity1) <= margin <= sentence.find(entity2):
-            #    pass
-            #else:
-            #    continue
+            if sentence.find(entity1) <= margin <= sentence.find(entity2):
+                pass
+            else:
+                continue
             if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence):
                 resulting_set.add(tuple([entity1, entity2, sentiment]))
     return resulting_set

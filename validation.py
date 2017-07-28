@@ -33,8 +33,12 @@ def validate():
                     file_num = file[3:5]
                 else:
                     file_num = file[3]
-                solution_file = open("test/art" + file_num + ".opin.txt", "r")
-                answer_file = open("train/art" + file_num + ".opin.txt", "r")
+                solution_file_name = "test/art" + file_num + ".opin.txt"
+                answer_file_name = "train/art" + file_num + ".opin.txt"
+                if not os.path.exists(solution_file_name) or not os.path.exists(answer_file_name):
+                    continue
+                solution_file = open(solution_file_name, "r")
+                answer_file = open(answer_file_name, "r")
                 our_answers = read_file(solution_file)
                 correct_answers = read_file(answer_file)
                 true_positives += len(our_answers & correct_answers)
