@@ -27,6 +27,8 @@ def read_sentiment_file():  # tested
 def read_input_file(file_number, lemmatizer):  # tested
     sentences = []
     file_name = "test/art" + str(file_number) + ".txt"
+    if not os.path.exists(file_name):
+        return None
     file = open(file_name, "r")
     for line in file:
         line = line.split(None, 2)
@@ -230,6 +232,8 @@ def main():
                 else:
                     file_num = int(file[3])
                 sentences = read_input_file(file_num, lemmatizer)
+                if not sentences:
+                    continue
                 entities = read_file_with_entities(file_num, lemmatizer)
                 for sentence in sentences:
                     entities_in_sentence = find_entities(sentence, entities)
