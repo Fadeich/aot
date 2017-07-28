@@ -15,7 +15,6 @@
 !5. Source: opinion, feeling (private state), or fact (sentiment connotation),
 !6. Ambiguity: if sentiment is different for senses of an ambiguous word, then sentiment orientations for all senses are described, the senses
 !are labeled with the RuThes concept names.
-
 аборт, Noun, аборт, negative, fact
 абортивный, Adj, абортивный, negative, fact
 абракадабра, Noun, абракадабра, negative, opinion
