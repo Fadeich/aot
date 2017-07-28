@@ -105,25 +105,22 @@ def calculate_sentiment(sentence, sentimental_words, operators, set_of_entities)
                 else:
                     list_of_words[j][1] *= operators[list_of_words[i][0]]
 
-    sentiment = 0
-    sentiment_flag = False
+    pos_sentiment = 0
+    neg_sentiment = 0
     for word in list_of_words:
-        if word[1] != 0:
-            sentiment_flag = True
         if word[1] < 0:
-            sentiment += 2 * word[1]
-        else:
-            sentiment += word[1]
-    if not sentiment_flag:
+            neg_sentiment += abs(word[1])
+        elif word[1] > 0:
+            pos_sentiment += abs(word[1])
+    if pos_sentiment == 0 and neg_sentiment == 0:
         return ""
-    threshold = 0
-    if sentiment <= threshold:
-        return "neg"
-    elif sentiment > threshold:
+    elif pos_sentiment > 2 * neg_sentiment:
         return "pos"
+    else:
+        return "neg"
 
 
-def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentiment_words):  # tested
+def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentiment_words, capital_dict):
     """Return set of triples (entity, entity, sentiment)
 
     Just takes as a subject the first entity in sentence and as object the last entity in sentence
@@ -140,11 +137,15 @@ def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentim
     list_of_entities = list(dict_of_entities)
     for entity1 in list_of_entities:
         for entity2 in list_of_entities:
-            if sentence.find(entity1) <= margin <= sentence.find(entity2):
+            if sentence.find(entity1) <= margin:
                 pass
             else:
                 continue
-            if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence):
+            if margin + 40 <= sentence.find(entity2):
+                pass
+            else:
+                continue
+            if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence, capital_dict):
                 resulting_set.add(tuple([entity1, entity2, sentiment]))
     return resulting_set
 
@@ -177,14 +178,14 @@ def correct_words(word):
     return word
 
 
-def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence):
+def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence, capital_dict):
     if entity1 in entity2 or entity2 in entity1:
         return False
     if len(entity1) >= 25 or len(entity2) >= 25:
         return False
     if entity1 == "СМИ" or entity2 == "СМИ":
         return False
-    if is_capital(entity1, entity2):
+    if is_capital(entity1, entity2, capital_dict):
         return False
     if dict_of_entities[entity2] == "PER" and dict_of_entities[entity1] != "PER":
         return False
@@ -197,16 +198,19 @@ def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentenc
     return True
 
 
-def is_capital(entity1, entity2):
+def read_capital_dictionary():
     file = open("Countries_and_their_capitals.txt", "r")
     capitals = {}
     for line in file:
         line = line.split("\t")
         capitals[line[0]] = line[1]
+        capitals[line[1]] = line[0]
     file.close()
+    return capitals
+
+
+def is_capital(entity1, entity2, capitals):
     if entity1 in capitals and capitals[entity1] == entity2:
-        return True
-    if entity2 in capitals and capitals[entity2] == entity1:
         return True
 
 
@@ -222,6 +226,7 @@ def main():
     lemmatizer = Mystem()
     operators = read_operators_file()
     sentimental_words = read_sentiment_file()
+    capital_dict = read_capital_dictionary()
     set_of_relations = set()  # set of triples (entity, entity, sentiment)
     dir_name = "test/"
     for d, dirs, files in os.walk(dir_name):
@@ -246,7 +251,8 @@ def main():
                             set_of_relations |= find_pairs_of_related_entities(sentence,
                                                                                sentiment,
                                                                                entities_in_sentence,
-                                                                               sentimental_words)
+                                                                               sentimental_words,
+                                                                               capital_dict)
                 write_in_resulting_file(file_num, set_of_relations)
                 set_of_relations = set()
 
