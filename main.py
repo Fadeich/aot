@@ -121,19 +121,29 @@ def calculate_sentiment(sentence, sentimental_words, operators, set_of_entities)
         return "pos"
 
 
-def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities):  # tested
+def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentiment_words):  # tested
     """Return set of triples (entity, entity, sentiment)
 
     Just takes as a subject the first entity in sentence and as object the last entity in sentence
     """
+    #if len(dict_of_entities) != 2:
+    #    return set()
     resulting_set = set()
+    list_of_words = sentence.split()
+    margin = 0
+    for word in sentence:
+        if word in sentiment_words:
+            break
+        margin += len(word) + 1
     list_of_entities = list(dict_of_entities)
-    entity1 = first_entity(dict_of_entities, sentence)
-    for entity2 in list_of_entities:
-        # entity1 = correct_words(entity1)
-        # entity2 = correct_words(entity2)
-        if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence):
-            resulting_set.add(tuple([entity1, entity2, sentiment]))
+    for entity1 in list_of_entities:
+        for entity2 in list_of_entities:
+            #if sentence.find(entity1) <= margin <= sentence.find(entity2):
+            #    pass
+            #else:
+            #    continue
+            if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence):
+                resulting_set.add(tuple([entity1, entity2, sentiment]))
     return resulting_set
 
 
@@ -180,10 +190,8 @@ def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentenc
     #    return False
     #if dict_of_entities[entity1] != dict_of_entities[entity2]:
     #    return False
-    if sentence.find(entity1) > sentence.find(entity2):
-        return False
-    if abs(sentence.find(entity1) - sentence.find(entity2)) < 5:
-        return False
+    #if sentence.find(entity1) > sentence.find(entity2):
+    #    return False
     return True
 
 
@@ -191,7 +199,7 @@ def is_capital(entity1, entity2):
     file = open("Countries_and_their_capitals.txt", "r")
     capitals = {}
     for line in file:
-        line = line.split()
+        line = line.split("\t")
         capitals[line[0]] = line[1]
     file.close()
     if entity1 in capitals and capitals[entity1] == entity2:
@@ -233,7 +241,8 @@ def main():
                         if sentiment != "":
                             set_of_relations |= find_pairs_of_related_entities(sentence,
                                                                                sentiment,
-                                                                               entities_in_sentence)
+                                                                               entities_in_sentence,
+                                                                               sentimental_words)
                 write_in_resulting_file(file_num, set_of_relations)
                 set_of_relations = set()
 
@@ -246,7 +255,7 @@ print(validation.validate())
 # разберись с подходами на правила и на машинке (и где обучаться в таком случае)
 
 # найти для каждого местоимения антицидент (идём по тексту, находим кандидутов,
-# фильтруем тех, которые не согласуюnся по роду и числу)
+# фильтруем тех, которые не согласуются по роду и числу)
 # ранжирование гипотех
 # признаки: расстояние между анафором и антицидентом (больше 90% антицидентов в том же и предыдущем предложении)
 # если есть слово "которая", перед ним запятиая, а перед запятой именная группа
