@@ -45,4 +45,12 @@ def validate():
     precision = true_positives / precision_denominator
     recall = true_positives / recall_denominator
     f1_measure = 2 / (1 / precision + 1 / recall)
-    return estimation(precision, recall, f1_measure)
+    result = estimation(precision, recall, f1_measure)
+    save_result(result)
+    return result
+
+
+def save_result(result):
+    file = open("statistics_of_launches.txt", "w+")
+    file.write(str(result) + "\n")
+    file.close()

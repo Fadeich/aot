@@ -20,6 +20,7 @@ def read_sentiment_file():  # tested
     for line in sentiment_file:
         if len(line) > 0 and line[0] != "!":
             sentimental_words[re.split("\W+", line)[0]] = re.split("\W+", line)[3]
+    sentiment_file.close()
     return sentimental_words
 
 
@@ -34,6 +35,7 @@ def read_input_file(file_number, lemmatizer):  # tested
             sentence = lemmatize_with_case_saving(lemmatizer, line)
             sentence = " ".join(sentence)
             sentences.append(sentence)
+    file.close()
     return sentences
 
 
@@ -69,6 +71,7 @@ def read_file_with_entities(file_number, lemmatizer):  # tested
         word = line[4]
         if not is_latin(word):
             set_of_entities.add(" ".join(lemmatize_with_case_saving(lemmatizer, word)))
+    file.close()
     return set_of_entities
 
 
@@ -142,6 +145,7 @@ def write_in_resulting_file(file_num, set_of_relations):  # tested
     file = open(file_name, "w")
     for record in set_of_relations:
         file.write(record[0] + ", " + record[1] + ", " + record[2] + "\n")
+    file.close()
 
 
 def main():
