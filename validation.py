@@ -51,6 +51,6 @@ def validate():
 
 
 def save_result(result):
-    file = open("statistics_of_launches.txt", "w+")
+    file = open("statistics_of_launches.txt", "a")
     file.write(str(result) + "\n")
     file.close()

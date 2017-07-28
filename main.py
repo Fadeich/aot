@@ -3,7 +3,7 @@ import re
 from pymystem3 import Mystem
 import validation
 
-# ToDo: (important) check if a word is an entity and correct it's register and for other make lowercase
+
 # ToDo: there are operators of len >= 2, but the cannot be found in list of words (sentence)
 def read_operators_file():  # tested
     """Returns a dictionary, key is word, and value is value"""
@@ -56,30 +56,30 @@ def lemmatize_with_case_saving(lemmatizer, line):
 
 
 def is_latin(word):  # tested
-    return (word[0] >= "a" and word[0] <= "z") or (word[0] >= 'A' and word[0] <= 'Z')
+    return ("a" <= word[0] <= "z") or ('A' <= word[0] <= 'Z')
 
 
 def read_file_with_entities(file_number, lemmatizer):  # tested
     """Returns set of entities"""
     file_name = "test/art" + str(file_number) + ".ann"
     file = open(file_name, "r")
-    set_of_entities = set()
+    dict_of_entities = {}
     for line in file:
         line = line.split(None, 4)
         if len(line) < 5:
             continue
         word = line[4]
         if not is_latin(word):
-            set_of_entities.add(" ".join(lemmatize_with_case_saving(lemmatizer, word)))
+            dict_of_entities[" ".join(lemmatize_with_case_saving(lemmatizer, word))] = line[1]
     file.close()
-    return set_of_entities
+    return dict_of_entities
 
 
 def find_entities(sentence, entities):  # tested
-    entities_in_sentence = set()
+    entities_in_sentence = {}
     for entity in entities:
         if entity in sentence:
-            entities_in_sentence.add(entity)
+            entities_in_sentence[entity] = entities[entity]
     return entities_in_sentence
 
 
@@ -104,40 +104,100 @@ def calculate_sentiment(sentence, sentimental_words, operators, set_of_entities)
                     list_of_words[j][1] *= operators[list_of_words[i][0]]
 
     sentiment = 0
+    sentiment_flag = False
     for word in list_of_words:
-        sentiment += word[1]
-    if sentiment < 0:
-        return "neg"
-    elif sentiment > 0:
-        return "pos"
-    else:
+        if word[1] != 0:
+            sentiment_flag = True
+        if word[1] < 0:
+            sentiment += 2 * word[1]
+        else:
+            sentiment += word[1]
+    if not sentiment_flag:
         return ""
+    threshold = 1
+    if sentiment <= threshold:
+        return "neg"
+    elif sentiment > threshold:
+        return "pos"
 
 
-def find_pairs_of_related_entities(sentence, sentiment, set_of_entities):  # tested
+def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities):  # tested
     """Return set of triples (entity, entity, sentiment)
 
     Just takes as a subject the first entity in sentence and as object the last entity in sentence
     """
     resulting_set = set()
-    list_of_entities = list(set_of_entities)
-    subject_entity = ""
-    object_entity = ""
-    for entity1 in list_of_entities:
-        for entity2 in list_of_entities:
-            if adjusted_additional_requirements(entity1, entity2):
-                subject_entity = entity1
-                object_entity = entity2
-                resulting_set.add(tuple([subject_entity, object_entity, sentiment]))
+    list_of_entities = list(dict_of_entities)
+    entity1 = first_entity(dict_of_entities, sentence)
+    for entity2 in list_of_entities:
+        # entity1 = correct_words(entity1)
+        # entity2 = correct_words(entity2)
+        if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence):
+            resulting_set.add(tuple([entity1, entity2, sentiment]))
     return resulting_set
 
 
-def adjusted_additional_requirements(entity1, entity2):
+def first_entity(dict_of_entities, sentence):
+    min_distance = float("inf")
+    res = None
+    for entity in dict_of_entities:
+        distance = sentence.find(entity)
+        if distance < min_distance:
+            res = entity
+            min_distance = distance
+    return res
+
+
+def last_entity(dict_of_entities, sentence):
+    max_distance = float("-inf")
+    res = None
+    for entity in dict_of_entities:
+        distance = sentence.find(entity)
+        if distance > max_distance:
+            res = entity
+            max_distance = distance
+    return res
+
+
+def correct_words(word):
+    if word == "ИГО":
+        return "ИГ"
+    return word
+
+
+def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence):
     if entity1 in entity2 or entity2 in entity1:
         return False
     if len(entity1) >= 25 or len(entity2) >= 25:
         return False
+    if entity1 == "СМИ" or entity2 == "СМИ":
+        return False
+    if is_capital(entity1, entity2):
+        return False
+    if dict_of_entities[entity2] == "PER" and dict_of_entities[entity1] != "PER":
+        return False
+    #if dict_of_entities[entity2] != "PER" and dict_of_entities[entity1] == "PER":
+    #    return False
+    #if dict_of_entities[entity1] != dict_of_entities[entity2]:
+    #    return False
+    if sentence.find(entity1) > sentence.find(entity2):
+        return False
+    if abs(sentence.find(entity1) - sentence.find(entity2)) < 5:
+        return False
     return True
+
+
+def is_capital(entity1, entity2):
+    file = open("Countries_and_their_capitals.txt", "r")
+    capitals = {}
+    for line in file:
+        line = line.split()
+        capitals[line[0]] = line[1]
+    file.close()
+    if entity1 in capitals and capitals[entity1] == entity2:
+        return True
+    if entity2 in capitals and capitals[entity2] == entity1:
+        return True
 
 
 def write_in_resulting_file(file_num, set_of_relations):  # tested
