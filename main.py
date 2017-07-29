@@ -5,7 +5,7 @@ import validation
 import make_feat_2
 
 
-# ToDo: there are operators of len >= 2, but the cannot be found in list of words (sentence)
+# ToDo: The only way to satisfy directions between entities is to use syntaxnet and other morphological tools
 def read_operators_file():  # tested
     """Returns a dictionary, key is word, and value is value"""
     operators = {}
@@ -25,7 +25,7 @@ def read_sentiment_file():  # tested
     return sentimental_words
 
 
-def read_input_file(file_number, lemmatizer):  # tested
+def read_input_file(file_number, lemmatizer):
     sentences = []
     file_name = "test/art" + str(file_number) + ".txt"
     if not os.path.exists(file_name):
@@ -58,11 +58,11 @@ def lemmatize_with_case_saving(lemmatizer, line):
     return sentence
 
 
-def is_latin(word):  # tested
+def is_latin(word):
     return ("a" <= word[0] <= "z") or ('A' <= word[0] <= 'Z')
 
 
-def read_file_with_entities(file_number, lemmatizer):  # tested
+def read_file_with_entities(file_number, lemmatizer):
     """Returns set of entities"""
     file_name = "test/art" + str(file_number) + ".ann"
     file = open(file_name, "r")
@@ -86,7 +86,7 @@ def find_entities(sentence, entities):  # tested
     return entities_in_sentence
 
 
-def calculate_sentiment(sentence, sentimental_words, operators, set_of_entities):  # tested
+def calculate_sentiment(sentence, sentimental_words, operators, set_of_entities):
     list_of_words = sentence.split()
     for i in range(len(list_of_words)):
         if list_of_words[i] in sentimental_words:
@@ -126,10 +126,10 @@ def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentim
 
     Just takes as a subject the first entity in sentence and as object the last entity in sentence
     """
-    #if len(dict_of_entities) != 2:
+    # if len(dict_of_entities) != 2:
     #    return set()
     resulting_set = set()
-    list_of_words = sentence.split()
+    # list_of_words = sentence.split()
     margin = 0
     for word in sentence:
         if word in sentiment_words:
@@ -193,6 +193,7 @@ def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentenc
     return True
 
 
+# Todo: make dictionaries that hold chunks of entities, all the pairs in that chunk are prohibited
 def read_capital_dictionary():
     file = open("Countries_and_their_capitals.txt", "r")
     capitals = {}
@@ -279,15 +280,3 @@ def main():
 
 main()
 print(validation.validate())
-
-# Можно брать местоимения в тексте и заменять их на сущности, разберись ещё, в каких случаях надо разрешать
-# анафору
-# разберись с подходами на правила и на машинке (и где обучаться в таком случае)
-
-# найти для каждого местоимения антицидент (идём по тексту, находим кандидутов,
-# фильтруем тех, которые не согласуются по роду и числу)
-# ранжирование гипотех
-# признаки: расстояние между анафором и антицидентом (больше 90% антицидентов в том же и предыдущем предложении)
-# если есть слово "которая", перед ним запятиая, а перед запятой именная группа
-# Чем длиннее именная группа в словах, тем более вероятно встретить анафору дальше
-# (длиннее имеется ввиду в символах)
