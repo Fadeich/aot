@@ -18,7 +18,7 @@ def pris(x):
     ar = x.split(",")
     return [ar[0].strip(), ar[1].strip()]
 
-def module_check(test_path, train_path, treshhold):
+def module_check(test_path, train_path, threshold):
     mypath = test_path
     onlyfiles2 = [f for f in listdir(mypath) if isfile(join(mypath, f)) and str(f)[-8:] == "opin.txt"]
     mypath = train_path
@@ -51,5 +51,5 @@ def module_check(test_path, train_path, treshhold):
     for name in array2_test:
         Array.append(name not in array2)
     ind_not_inc = (np.array(Array).reshape((-1, 2))[:, 1] + np.array(Array).reshape((-1, 2))[:, 0])
-    ind = (np.abs(model.predict_proba(data_test)[:, 0] - model.predict_proba(data_test)[:, 1]) > treshhold)*(model.predict(data_test) != y_test)
+    ind = (np.abs(model.predict_proba(data_test)[:, 0] - model.predict_proba(data_test)[:, 1]) > threshold) * (model.predict(data_test) != y_test)
     return ind*ind_not_inc

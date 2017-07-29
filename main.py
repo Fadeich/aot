@@ -121,7 +121,7 @@ def calculate_sentiment(sentence, sentimental_words, operators, set_of_entities)
         return "neg"
 
 
-def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentiment_words, capital_dict):
+def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentiment_words, capitals_list):
     """Return set of triples (entity, entity, sentiment)
 
     Just takes as a subject the first entity in sentence and as object the last entity in sentence
@@ -136,13 +136,16 @@ def find_pairs_of_related_entities(sentence, sentiment, dict_of_entities, sentim
             break
         margin += len(word) + 1
     list_of_entities = list(dict_of_entities)
+    # entity1 = first_entity(dict_of_entities, sentence)
+    # entity2 = last_entity(dict_of_entities, sentence)
     for entity1 in list_of_entities:
         for entity2 in list_of_entities:
-            if sentence.find(entity1) < margin < sentence.find(entity2):
-                if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence, capital_dict):
-                    resulting_set.add(tuple([entity1, entity2, sentiment]))
-    #entity1 = first_entity(dict_of_entities, sentence)
-    #entity2 = last_entity(dict_of_entities, sentence)
+            if not (sentence.find(entity1) < margin < sentence.find(entity2)):
+                continue
+            #if sentence.find(entity1) > sentence.find(entity2):
+            #    continue
+            if adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence, capitals_list):
+                resulting_set.add(tuple([entity1, entity2, sentiment]))
 
     return resulting_set
 
@@ -175,39 +178,37 @@ def correct_words(word):
     return word
 
 
-def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence, capital_dict):
+def adjusted_additional_requirements(entity1, entity2, dict_of_entities, sentence, capitals_list):
     if entity1 in entity2 or entity2 in entity1:
         return False
     if len(entity1) >= 25 or len(entity2) >= 25:
         return False
     if entity1 == "СМИ" or entity2 == "СМИ":
         return False
-    if is_capital(entity1, entity2, capital_dict):
+    if is_capital(entity1, entity2, capitals_list):
         return False
-    #if dict_of_entities[entity2] == "PER" and dict_of_entities[entity1] != "PER":
+    # if dict_of_entities[entity2] == "PER" and dict_of_entities[entity1] != "PER":
     #    return False
-    #if dict_of_entities[entity2] != "PER" and dict_of_entities[entity1] == "PER":
+    # if dict_of_entities[entity2] != "PER" and dict_of_entities[entity1] == "PER":
     #    return False
-    if sentence.find(entity1) > sentence.find(entity2):
-        return False
     return True
 
 
 # Todo: make dictionaries that hold chunks of entities, all the pairs in that chunk are prohibited
-def read_capital_dictionary():
+def read_identical_entity_pairs():
     file = open("Countries_and_their_capitals.txt", "r")
-    capitals = {}
+    capitals = []
     for line in file:
         line = line.split("\t")
-        capitals[line[0].strip()] = line[1].strip()
-        capitals[line[1].strip()] = line[0].strip()
+        line[0] = line[0].strip()
+        line[1] = line[1].strip()
+        capitals.append(tuple([line[0], line[1]]))
     file.close()
     return capitals
 
 
 def is_capital(entity1, entity2, capitals):
-    if entity1 in capitals and capitals[entity1] == entity2:
-        return True
+    return tuple([entity1, entity2]) in capitals or tuple([entity2, entity1]) in capitals
 
 
 def write_in_resulting_file(file_num, set_of_relations):  # tested
@@ -222,7 +223,7 @@ def main():
     lemmatizer = Mystem()
     operators = read_operators_file()
     sentimental_words = read_sentiment_file()
-    capital_dict = read_capital_dictionary()
+    capitals_list = read_identical_entity_pairs()
     set_of_relations = set()  # set of triples (entity, entity, sentiment)
     dir_name = "test/"
     for d, dirs, files in os.walk(dir_name):
@@ -248,11 +249,11 @@ def main():
                                                                                sentiment,
                                                                                entities_in_sentence,
                                                                                sentimental_words,
-                                                                               capital_dict)
+                                                                               capitals_list)
                 write_in_resulting_file(file_num, set_of_relations)
                 set_of_relations = set()
 
-    inverted_indices = list(make_feat_2.module_check("test", "train", 0.2))
+    inverted_indices = list(make_feat_2.module_check("test", "train", 0))
     for d, dirs, files in os.walk(dir_name):
         for file in files:
             if file.endswith(".opin.txt"):
@@ -264,11 +265,13 @@ def main():
                     if inverted_indices[i]:
                         str = list_of_lines[i][-4:]
                         if str == "pos\n":
-                            list_of_lines[i] = list_of_lines[i][:-4] + str
-                            #str = "neg\n"
-                        else:
-                            #str = "pos\n"
                             list_of_lines[i] = ""
+                            # str = "neg\n"
+                            # list_of_lines[i] = list_of_lines[i][:-4] + str
+                        else:
+                            str = "pos\n"
+                            # list_of_lines[i] = ""
+                            list_of_lines[i] = list_of_lines[i][:-4] + str
 
                 inverted_indices = inverted_indices[len(list_of_lines):]
                 change_file.close()
